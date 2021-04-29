@@ -1,0 +1,251 @@
+.footer {
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--color-black-a50);
+  letter-spacing: normal;
+}
+
+.footer__container {
+  display: grid;
+  margin-top: 24px;
+  padding: 0;
+  grid-template-columns: 408px 390px 1fr;
+
+  @media (max-width: $tablet-width-max) {
+    grid-template-columns: 54.5% 45.5%;
+    padding: 0 20px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    display: flex;
+    padding: 0 21px 0 11px;
+    flex-direction: column;
+  }
+}
+
+.footer__col {
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: 50px;
+
+  @media (max-width: $tablet-width-max) {
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: var(--color-divider);
+
+    @media (max-width: $mobile-width-max) {
+      display: block;
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-divider);
+    }
+  }
+
+  &:nth-child(2) {
+    margin-left: 90px;
+
+    @media (max-width: $tablet-width-max) {
+      margin-left: 50px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: $mobile-width-max) {
+      margin-left: 0;
+    }
+  }
+
+  &:nth-child(3),
+  &:last-child {
+    margin-left: 49px;
+
+    @media (max-width: $tablet-width-max) {
+      margin-left: 0;
+      padding-top: 30px;
+      grid-column: 1/-1;
+      text-align: center;
+    }
+
+    @media (max-width: $mobile-width-max) {
+      padding-top: 0;
+    }
+
+    &::after {
+      display: none;
+
+      @media (max-width: $tablet-width-max) {
+        display: block;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: var(--color-divider);
+      }
+
+      @media (max-width: $mobile-width-max) {
+        top: -30px;
+      }
+    }
+  }
+}
+
+.footer__trips {
+  display: flex;
+
+  @media (max-width: $mobile-width-max) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $mobile-width-max) {
+    align-items: center;
+  }
+}
+
+.footer__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--color-black);
+}
+
+.footer__list {
+  min-width: 80px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-right: 50px;
+
+  &:last-child {
+    margin-right: 0;
+    margin-left: -6px;
+  }
+
+  @media (max-width: $tablet-width-max) {
+    margin-right: 46px;
+
+    &:last-child {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: $mobile-width-max) {
+    min-width: 134px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.footer__item {
+  margin-bottom: 10px;
+}
+
+.footer__link {
+  color: inherit;
+
+  &:hover,
+  &:active {
+    transition: color 0.2s ease-out;
+    color: var(--color-accent);
+  }
+}
+
+.footer__contact-link {
+  display: flex;
+  position: relative;
+  margin-bottom: 16px;
+  align-items: center;
+  color: var(--color-accent);
+  text-decoration: underline;
+
+  &--phone {
+    margin-left: -3px;
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
+
+.footer__contact-img {
+  display: block;
+  margin-right: 15px;
+}
+
+.footer__mail-text-mobile {
+  display: none;
+
+  @media (max-width: $tablet-width-max) {
+    display: block;
+  }
+}
+
+.footer__mail-text-desktop {
+  @media (max-width: $tablet-width-max) {
+    display: none;
+  }
+}
+
+.footer__text {
+  margin-bottom: 0;
+  line-height: 24px;
+}
+
+.footer__contact-link--mail .footer__contact-img {
+  width: 26px;
+  height: 20px;
+}
+
+.footer__contact-link--phone .footer__contact-img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer__contact-link:hover,
+.footer__contact-link:active {
+  transition: color 0.2s ease-out;
+  color: var(--color-darkness);
+}
+
+.footer__contact-link--mail:hover path,
+.footer__contact-link--mail:active path {
+  transition: fill 0.2s ease-out;
+  fill: var(--color-darkness);
+}
+
+.footer__contact-link--phone:hover path,
+.footer__contact-link--phone:active path {
+  transition: stroke 0.2s ease-out;
+  stroke: var(--color-darkness);
+}

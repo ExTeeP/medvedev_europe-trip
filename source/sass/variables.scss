@@ -1,0 +1,24 @@
+// Цвета
+:root {
+  --color-accent: #fe7865;
+  --color-accent-hover: #f17d4b;
+  --color-white: #ffffff;
+  --color-grey-light: #fbf8f8;
+  --color-black: #141517;
+  --color-darkness: #2c2e3f;
+  --color-black-a50: rgba(20, 21, 23, 0.5);
+  --color-divider: #d7d9df;
+}
+
+// Размеры вьюпорта
+$mobile-width-min: 320px;
+$mobile-width-max: 767.8px;
+
+$tablet-width-min: 768px;
+$tablet-width-max: 1023.8px;
+
+$desktop-width-min: 1024px;
+$desktop-width-max: 1170px;
+
+// Шрифты
+$main-font: "Montserrat", "Arial", sans-serif;

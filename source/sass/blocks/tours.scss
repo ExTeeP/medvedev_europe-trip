@@ -1,0 +1,37 @@
+.tours {
+  padding-top: 200px;
+}
+
+.tours__title {
+  margin-bottom: 30px;
+}
+
+.tours__text {
+  margin: 0;
+  margin-bottom: 35px;
+  color: rgba(44, 46, 63, 0.7);
+}
+
+.tours__card-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tours__card-item {
+  margin-right: 60px;
+  margin-bottom: 101px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+}
