@@ -15,4 +15,26 @@
   border: none;
   text-decoration: none;
   cursor: pointer;
+
+  &:hover,
+  &:active {
+    transition: background-color 0.2s ease-out;
+    background-color: var(--color-accent-hover);
+  }
+
+  @media (max-width: $tablet-width-max) {
+    min-height: 50px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    width: 100%;
+    max-width: 288px;
+  }
+}
+
+.button__icon {
+  margin-left: auto;
 }

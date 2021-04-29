@@ -30,10 +30,7 @@
 }
 
 .header__logo {
-  margin-right: 30px;
-
   @media (max-width: $tablet-width-max) {
-    margin-right: 0;
     margin-left: 21px;
   }
 

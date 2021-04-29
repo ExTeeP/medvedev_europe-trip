@@ -1,13 +1,41 @@
 .greeting {
-  // height: 100vh;
-  height: 959px;
+  height: 100vh;
+  max-height: 959px;
   padding-top: 99px;
   background-image: url("../img/background-desktop.jpg");
   background-color: var(--color-darkness);
-  background-position: center;
+  background-position: bottom 4% left 41%;
   background-repeat: no-repeat;
-  background-size: cover;
   color: var(--color-white);
+
+  @media (min-width: $desktop-width-min) and (max-height: 720px) {
+    background-size: cover;
+  }
+
+  @media (max-width: $tablet-width-max) {
+    height: auto;
+    min-height: 394px;
+    padding-top: 50px;
+    background-image: url("../img/background-tablet.jpg");
+    background-size: cover;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    background-image: none;
+    background-color: var(--color-white);
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 235px;
+      background-image: url("../img/background-mobile.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+      background-color: var(--color-darkness);
+    }
+  }
 }
 
 .greeting__container {
@@ -19,15 +47,54 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  @media (max-width: $tablet-width-max) {
+    padding: 0;
+    max-width: 398px;
+    padding-top: 60px;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    padding-top: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .greeting__title {
   margin: 0;
+  margin-top: -111px;
   margin-bottom: 30px;
   font-weight: 600;
   font-size: 55px;
   line-height: 80px;
   letter-spacing: -1px;
+
+  @media (min-width: $desktop-width-min) and (max-height: 720px) {
+    margin-top: 0;
+  }
+
+  @media (max-width: $tablet-width-max) {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: normal;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    position: absolute;
+    margin: 0;
+    padding: 0 30px;
+    top: 130px;
+    right: 0;
+    left: 0;
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .greeting__text {
@@ -35,8 +102,21 @@
   margin-bottom: 32px;
   font-size: 16px;
   line-height: 27px;
+
+  @media (max-width: $tablet-width-max) {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 20px;
+    color: var(--color-darkness);
+  }
 }
 
 .greeting__button {
   min-width: 340px;
+
+  @media (max-width: $tablet-width-max) {
+    min-width: 250px;
+  }
 }
