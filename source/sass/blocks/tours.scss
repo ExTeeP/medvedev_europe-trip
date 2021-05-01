@@ -1,37 +1,135 @@
 .tours {
   padding-top: 200px;
+
+  @media (max-width: $tablet-width-max) {
+    padding-top: 80px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    padding-top: 110px;
+  }
+}
+
+.tours__container {
+  @media (max-width: $tablet-width-max) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .tours__title {
-  margin-bottom: 30px;
+  max-width: 358px;
+  margin-bottom: 32px;
+
+  @media (max-width: $tablet-width-max) {
+    margin-bottom: 20px;
+  }
 }
 
 .tours__text {
+  max-width: 358px;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
   color: rgba(44, 46, 63, 0.7);
+
+  @media (max-width: $tablet-width-max) {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 10px;
+  }
 }
 
 .tours__card-list {
   display: flex;
+  margin: 0;
+  padding: 20px 0 0;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
   list-style: none;
+
+  @media (max-width: $tablet-width-max) {
+    margin-bottom: 92px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 9px;
+    padding-top: 8px;
+    justify-content: space-around;
+  }
 }
 
 .tours__card-item {
-  margin-right: 60px;
+  display: flex;
+  width: 33.3333333%;
+  max-width: 350px;
   margin-bottom: 101px;
-
-  &:nth-child(3n) {
-    margin-right: 0;
-  }
+  margin-right: 60px;
 
   &:last-child {
     margin-right: 0;
+    margin-left: 60px;
   }
 
+  &:nth-child(3n) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  &:nth-child(4n),
+  &:nth-child(7n) {
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop-width-min) and (max-width: 1209.8px) {
+    &:nth-child(odd) {
+      margin-right: 60px;
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 60px;
+      margin-left: 60px;
+    }
+
+    &:nth-child(even) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: $tablet-width-max) {
+    width: 50%;
+    max-width: 288px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+
+    &:last-child,
+    &:nth-child(3n),
+    &:nth-child(4n),
+    &:nth-child(7n) {
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+
+    @media (max-width: $mobile-width-max) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 35px;
+      margin-left: 0;
+
+      &:last-child,
+      &:nth-child(3n),
+      &:nth-child(4n),
+      &:nth-child(7n) {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
 }

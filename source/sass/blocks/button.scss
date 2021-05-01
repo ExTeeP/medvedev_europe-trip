@@ -2,7 +2,7 @@
   display: inline-flex;
   min-height: 75px;
   margin: 0;
-  padding: 10px 40px;
+  padding: 10px 20px;
   align-items: center;
   justify-content: center;
   font-weight: bold;
@@ -11,7 +11,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   background-color: var(--color-accent);
-  color: inherit;
+  color: var(--color-white);
   border: none;
   text-decoration: none;
   cursor: pointer;

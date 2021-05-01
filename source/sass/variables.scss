@@ -4,10 +4,14 @@
   --color-accent-hover: #f17d4b;
   --color-white: #ffffff;
   --color-grey-light: #fbf8f8;
+  --color-blue-light: #c0c2c4;
   --color-black: #141517;
-  --color-darkness: #2c2e3f;
   --color-black-a50: rgba(20, 21, 23, 0.5);
+  --color-black-a60: rgba(20, 21, 23, 0.6);
+  --color-darkness: #2c2e3f;
   --color-divider: #d7d9df;
+  --color-tabs: #c0c0c5;
+  --color-tabs-a70: rgba(44, 46, 63, 0.7);
 }
 
 // Размеры вьюпорта
@@ -18,7 +22,10 @@ $tablet-width-min: 768px;
 $tablet-width-max: 1023.8px;
 
 $desktop-width-min: 1024px;
-$desktop-width-max: 1170px;
+$desktop-width-max: 1210px;
 
 // Шрифты
 $main-font: "Montserrat", "Arial", sans-serif;
+
+// Для ретинизации
+$retina-dppx: 1.5dppx;

@@ -9,8 +9,6 @@
 .header__container {
   display: grid;
   min-height: 99px;
-  padding-right: 9px;
-  padding-left: 6px;
   grid-template-columns: auto 1fr 240px;
   align-items: center;
 
@@ -113,6 +111,7 @@
 
 .header__call {
   display: flex;
+  padding-right: 14px;
   flex-direction: row;
   justify-content: flex-end;
   font-size: 18px;
