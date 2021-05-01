@@ -1,5 +1,5 @@
 .tours {
-  padding-top: 200px;
+  padding-top: 195px;
 
   @media (max-width: $tablet-width-max) {
     padding-top: 80px;
@@ -31,34 +31,33 @@
 .tours__text {
   max-width: 358px;
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 4px;
   color: rgba(44, 46, 63, 0.7);
 
   @media (max-width: $tablet-width-max) {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   @media (max-width: $mobile-width-max) {
-    margin-bottom: 10px;
+    margin-bottom: 18px;
   }
 }
 
 .tours__card-list {
   display: flex;
   margin: 0;
-  padding: 20px 0 0;
+  padding: 0;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   list-style: none;
 
   @media (max-width: $tablet-width-max) {
-    margin-bottom: 92px;
+    margin-bottom: 50px;
   }
 
   @media (max-width: $mobile-width-max) {
-    margin-bottom: 9px;
-    padding-top: 8px;
+    margin-bottom: 0;
     justify-content: space-around;
   }
 }
@@ -67,8 +66,9 @@
   display: flex;
   width: 33.3333333%;
   max-width: 350px;
-  margin-bottom: 101px;
+  margin-top: 50px;
   margin-right: 60px;
+  margin-bottom: 50px;
 
   &:last-child {
     margin-right: 0;
@@ -105,9 +105,7 @@
   @media (max-width: $tablet-width-max) {
     width: 50%;
     max-width: 288px;
-    margin-right: 15px;
-    margin-bottom: 20px;
-    margin-left: 15px;
+    margin: 10px 15px;
 
     &:last-child,
     &:nth-child(3n),
@@ -119,9 +117,7 @@
 
     @media (max-width: $mobile-width-max) {
       width: 100%;
-      margin-right: 0;
-      margin-bottom: 35px;
-      margin-left: 0;
+      margin: 0 0 35px;
 
       &:last-child,
       &:nth-child(3n),

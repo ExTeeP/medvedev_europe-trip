@@ -1,0 +1,142 @@
+.package {
+  display: flex;
+  flex-direction: column;
+  padding: 37px 29px 29px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: normal;
+  color: var(--color-darkness);
+  border: 1px solid var(--color-tabs);
+  border-radius: 6px;
+
+  @media (max-width: $tablet-width-max) {
+    padding: 26px 19px 0;
+    border-bottom: none;
+  }
+}
+
+.package__header {
+  display: flex;
+  min-height: 150px;
+  flex-direction: column;
+  border-bottom: 1px solid var(--color-tabs);
+
+  @media (max-width: $tablet-width-max) {
+    min-height: none;
+    margin-bottom: 20px;
+  }
+}
+
+.package__title {
+  display: flex;
+  margin: 0;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+  color: var(--color-grey);
+
+  @media (max-width: $tablet-width-max) {
+    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: normal;
+    font-size: 24px;
+    line-height: 38px;
+  }
+}
+
+.package__name {
+  margin-right: auto;
+
+  @media (max-width: $tablet-width-max) {
+    margin-right: 0;
+    margin-bottom: 6px;
+  }
+}
+
+.package__text {
+  margin-top: 16px;
+  margin-bottom: 28px;
+
+  @media (max-width: $tablet-width-max) {
+    margin-top: 0;
+    margin-bottom: 9px;
+    text-align: center;
+  }
+}
+
+.package__list {
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 0;
+  padding-right: 20px;
+  font-size: 16px;
+  line-height: 32px;
+  list-style: none;
+
+  @media (max-width: $tablet-width-max) {
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-right: 0;
+  }
+}
+
+.package__item {
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $tablet-width-max) {
+    margin-bottom: 10px;
+  }
+}
+
+.package__check-img {
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
+
+.package__check-img-path {
+  fill: var(--color-accent);
+}
+
+.package__button {
+  margin-top: auto;
+
+  @media (max-width: $tablet-width-max) {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+  }
+}
+
+.package--top {
+  border: 3px solid var(--color-accent);
+  padding: 35px 27px 27px;
+
+  @media (max-width: $tablet-width-max) {
+    padding: 24px 17px 0;
+    border-bottom: none;
+  }
+}
+
+.package--top .package__title {
+  color: var(--color-accent);
+}
+
+.package--top .package__header {
+  border-color: var(--color-accent);
+}
+
+.package--top .package__check-img-path {
+  fill: var(--color-black);
+}

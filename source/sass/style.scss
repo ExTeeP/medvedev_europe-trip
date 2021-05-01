@@ -1,6 +1,7 @@
 @import "font-face";
 @import "variables";
 @import "global";
+@import "blocks/page";
 @import "blocks/visually-hidden";
 @import "blocks/container";
 @import "blocks/button";
@@ -14,4 +15,6 @@
 @import "blocks/tour-tabs";
 @import "blocks/tour-countries";
 @import "blocks/tour-testimonial";
+@import "blocks/price";
+@import "blocks/package";
 @import "blocks/footer";

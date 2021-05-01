@@ -40,7 +40,6 @@
     width: 100%;
     margin-right: 0;
     margin-bottom: 30px;
-    padding-left: 16px;
   }
 }
 
@@ -49,13 +48,15 @@
 
   &:hover,
   &:active {
-    transition: color 0.2s ease-out;
+    transition: color 0.3s ease-out, background-color 0.3s ease-out;
     color: var(--color-accent);
+    background-color: var(--color-blue-light);
   }
 
   @media (max-width: $tablet-width-max) {
     display: flex;
     min-height: 60px;
+    padding-left: 16px;
     align-items: center;
     text-align: left;
     background-color: var(--color-grey-light);

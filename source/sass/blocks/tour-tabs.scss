@@ -1,9 +1,9 @@
 .tour-tabs {
   display: flex;
   max-width: max-content;
+  margin-bottom: 77px;
+  padding-top: 50px;
   padding-bottom: 16px;
-  margin-top: -4px;
-  margin-bottom: 79px;
   flex-wrap: wrap;
   font-weight: 500;
   font-size: 20px;
@@ -13,6 +13,7 @@
   @media (max-width: $tablet-width-max) {
     width: 100%;
     margin-bottom: 17px;
+    padding-top: 48px;
     padding-left: 17px;
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -20,6 +21,7 @@
   }
 
   @media (max-width: $mobile-width-max) {
+    padding-top: 5px;
     padding-left: 0;
     margin-bottom: 8px;
   }
@@ -40,10 +42,6 @@
     height: 2px;
     margin-bottom: -16px;
     background-color: var(--color-tabs);
-
-    // @media (max-width: $tablet-width-max) {
-    //   display: none;
-    // }
   }
 
   &:last-child::after {
@@ -52,6 +50,7 @@
 
   &:last-child {
     margin-right: 0;
+    padding-right: 50px;
   }
 
   &:focus,
