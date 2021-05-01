@@ -1,25 +1,99 @@
 .tour-card {
   display: block;
-  width: 350px;
-  height: 430px;
+  position: relative;
+  width: 100%;
+  min-height: 430px;
+  color: inherit;
+
+  @media (max-width: $tablet-width-max) {
+    min-height: 425px;
+  }
 }
 
 .tour-card__title {
+  display: flex;
+  position: absolute;
+  width: 215px;
+  height: 61px;
+  margin: 0;
+  bottom: 0;
+  left: 68px;
+  justify-content: center;
+  align-items: center;
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
   text-align: center;
   letter-spacing: -0.4px;
+  background-color: var(--color-white);
+
+  @media (max-width: $tablet-width-max) {
+    left: 36px;
+  }
 }
 
 .tour-card__img {
-
+  display: block;
 }
 
 .tour-card__overlay {
-
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
 
-.tour-card__overlay-item {
-  visibility: hidden;
+.tour-card__overlay:hover,
+.tour-card__overlay:focus-within {
+  transition: background-color 0.2s ease-out, opacity 0.2s ease-out;
+  background-color: var(--color-black-a60);
+  opacity: 1;
+}
+
+.tour-card__overlay:active {
+  transition: opacity 0.3s ease-out;
+  opacity: 0.8;
+}
+
+.tour-card__breakout-button {
+  margin: 0;
+  padding: 30px 25px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  background-color: transparent;
+}
+
+.tour-card__breakout-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tour-card__breakout-button:focus {
+  outline: none;
+}
+
+.tour-card__breakout-button:focus::before {
+  outline: 1px solid var(--color-white);
+  outline-offset: -10px;
+}
+
+.tour-card__breakout-button,
+.tour-card__breakout-button::before {
+  cursor: pointer;
 }

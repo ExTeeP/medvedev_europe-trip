@@ -5,12 +5,26 @@
   line-height: 80px;
   color: var(--color-black);
 
+  @media (max-width: $tablet-width-max) {
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
   &::after {
     content: "";
     display: block;
-    width: 70%;
+    width: 64%;
     height: 4px;
     margin-top: 29px;
     background-color: var(--color-accent);
+
+    @media (max-width: $tablet-width-max) {
+      display: none;
+    }
   }
 }
