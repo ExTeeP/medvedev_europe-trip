@@ -9,7 +9,7 @@
   border: 1px solid var(--color-tabs);
   border-radius: 6px;
 
-  @media (max-width: $tablet-width-max) {
+  @media (max-width: $desktop-width-max) {
     padding: 26px 19px 0;
     border-bottom: none;
   }
@@ -21,7 +21,7 @@
   flex-direction: column;
   border-bottom: 1px solid var(--color-tabs);
 
-  @media (max-width: $tablet-width-max) {
+  @media (max-width: $desktop-width-max) {
     min-height: none;
     margin-bottom: 20px;
   }
@@ -38,7 +38,7 @@
   line-height: 38px;
   color: var(--color-grey);
 
-  @media (max-width: $tablet-width-max) {
+  @media (max-width: $desktop-width-max) {
     margin-bottom: 10px;
     flex-direction: column;
     align-items: center;
@@ -51,7 +51,7 @@
 .package__name {
   margin-right: auto;
 
-  @media (max-width: $tablet-width-max) {
+  @media (max-width: $desktop-width-max) {
     margin-right: 0;
     margin-bottom: 6px;
   }
@@ -61,7 +61,7 @@
   margin-top: 16px;
   margin-bottom: 28px;
 
-  @media (max-width: $tablet-width-max) {
+  @media (max-width: $desktop-width-max) {
     margin-top: 0;
     margin-bottom: 9px;
     text-align: center;
@@ -78,7 +78,7 @@
   line-height: 32px;
   list-style: none;
 
-  @media (max-width: $tablet-width-max) {
+  @media (max-width: $desktop-width-max) {
     margin-top: 0;
     margin-bottom: 30px;
     padding-right: 0;
@@ -94,7 +94,7 @@
     margin-bottom: 0;
   }
 
-  @media (max-width: $tablet-width-max) {
+  @media (max-width: $desktop-width-max) {
     margin-bottom: 10px;
   }
 }
@@ -113,7 +113,7 @@
 .package__button {
   margin-top: auto;
 
-  @media (max-width: $tablet-width-max) {
+  @media (max-width: $desktop-width-max) {
     width: calc(100% + 40px);
     margin-left: -20px;
   }
@@ -123,7 +123,7 @@
   border: 3px solid var(--color-accent);
   padding: 35px 27px 27px;
 
-  @media (max-width: $tablet-width-max) {
+  @media (max-width: $desktop-width-max) {
     padding: 24px 17px 0;
     border-bottom: none;
   }

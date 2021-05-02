@@ -85,7 +85,7 @@
     margin-left: 0;
   }
 
-  @media (min-width: $desktop-width-min) and (max-width: 1209.8px) {
+  @media (min-width: $desktop-width-min) and (max-width: $desktop-width-max) {
     &:nth-child(odd) {
       margin-right: 60px;
       margin-left: 0;
