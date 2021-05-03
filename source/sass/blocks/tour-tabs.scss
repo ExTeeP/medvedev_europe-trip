@@ -1,7 +1,7 @@
 .tour-tabs {
   display: flex;
   max-width: max-content;
-  margin-bottom: 77px;
+  margin-bottom: 50px;
   padding-top: 50px;
   padding-bottom: 16px;
   flex-wrap: wrap;
@@ -30,7 +30,12 @@
 .tour-tabs__item {
   position: relative;
   margin-right: 100px;
+  margin-bottom: 27px;
   color: inherit;
+
+  @media (max-width: $tablet-width-max) {
+    margin-bottom: 0;
+  }
 
   &::after {
     content: "";

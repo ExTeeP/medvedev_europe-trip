@@ -6,7 +6,7 @@
   }
 
   @media (max-width: $mobile-width-max) {
-    padding-top: 110px;
+    padding-top: 95px;
   }
 }
 
@@ -22,6 +22,10 @@
 .tours__title {
   max-width: 358px;
   margin-bottom: 32px;
+
+  &::after {
+    width: 228px;
+  }
 
   @media (max-width: $tablet-width-max) {
     margin-bottom: 20px;

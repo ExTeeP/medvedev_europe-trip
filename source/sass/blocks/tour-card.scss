@@ -1,8 +1,9 @@
 .tour-card {
-  display: block;
+  display: flex;
   position: relative;
   width: 100%;
   max-height: 430px;
+  justify-content: center;
   color: inherit;
 
   @media (max-width: $tablet-width-max) {
@@ -11,16 +12,11 @@
 }
 
 .tour-card__title {
-  display: flex;
   position: absolute;
-  width: 215px;
-  height: 61px;
-  margin: 0 auto;
+  min-width: 215px;
+  margin: 0 auto 0;
+  padding: 16px;
   bottom: 0;
-  right: 0;
-  left: 0;
-  justify-content: center;
-  align-items: center;
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;

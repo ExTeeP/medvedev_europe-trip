@@ -1,23 +1,23 @@
 
 .tour-testimonial {
-  display: block;
-  position: absolute;
-  width: 382px;
+  max-width: 382px;
   padding: 30px;
-  top: 114px;
-  right: 0;
+  margin: auto 0;
+  margin-left: -112px;
   background-color: var(--color-white);
 
   @media (max-width: $tablet-width-max) {
-    top: 56%;
-    left: calc(50% - 191px);
+    position: relative;
+    margin: 0 auto;
+    margin-top: -335px;
+    top: auto;
+    left: auto;
     text-align: left;
   }
 
   @media (max-width: $mobile-width-max) {
-    top: 63.5%;
     width: 268px;
-    left: calc(50% - 134px);
+    margin-top: -365px;
     text-align: center;
     padding-right: 20px;
     padding-left: 20px;

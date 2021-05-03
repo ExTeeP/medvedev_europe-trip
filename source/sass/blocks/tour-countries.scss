@@ -13,6 +13,7 @@
 .tour-countries__content {
   max-width: 370px;
   margin-right: 100px;
+  flex-shrink: 0;
   font-size: 16px;
   line-height: 28px;
   color: var(--color-tabs-a70);
@@ -54,6 +55,7 @@
 
 .tour-countries__button {
   min-width: 250px;
+  margin-bottom: 15px;
 
   @media (max-width: $tablet-width-max) {
     margin-bottom: 10px;
@@ -62,6 +64,8 @@
 
 .tour-countries__img-wrapper {
   width: 430px;
+  margin: auto 0;
+  flex-shrink: 0;
 
   @media (max-width: $tablet-width-max) {
     width: calc(100% + 40px);

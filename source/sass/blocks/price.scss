@@ -2,7 +2,11 @@
   padding-top: 240px;
 
   @media (max-width: $tablet-width-max) {
-    padding-top: 112px;
+    padding-top: 80px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    padding-top: 50px;
   }
 }
 
@@ -71,7 +75,8 @@
 .price__call {
   display: flex;
   flex-direction: column;
-  text-align: right;
+  align-items: center;
+  flex-shrink: 0;
   font-size: 20px;
   line-height: 32px;
   letter-spacing: normal;
@@ -82,14 +87,12 @@
 }
 
 .price__call-text {
-  margin-right: 30px;
   margin-bottom: 14px;
   font-weight: 500;
   font-size: 22px;
   line-height: 34px;
 
   @media (max-width: $tablet-width-max) {
-    margin-right: 0;
     margin-bottom: 10px;
     font-size: 18px;
     line-height: 34px;
@@ -98,7 +101,6 @@
 
 .price__call-link {
   position: relative;
-  margin-right: 35px;
   color: inherit;
 
   &:hover,
@@ -108,7 +110,6 @@
   }
 
   @media (max-width: $tablet-width-max) {
-    margin-right: 0;
     font-size: 18px;
     line-height: 32px;
     text-decoration-line: underline;
@@ -121,7 +122,7 @@
   width: 30px;
   height: 30px;
   top: -1px;
-  left: -3px;
+  left: -50px;
 
   @media (max-width: $tablet-width-max) {
     display: none;
@@ -170,5 +171,13 @@
     min-height: 614px;
     margin-right: auto;
     margin-left: auto;
+
+    &:nth-child(even) {
+      margin-right: auto;
+    }
+
+    &:nth-child(odd) {
+      margin-left: auto;
+    }
   }
 }
