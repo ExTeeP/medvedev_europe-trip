@@ -8,6 +8,13 @@
   color: var(--color-darkness);
   border: 1px solid var(--color-tabs);
   border-radius: 6px;
+  outline: transparent solid 3px;
+  outline-offset: -1px;
+
+  &:hover {
+    transition: outline 0.4s ease-out;
+    outline: var(--color-accent) solid 3px;
+  }
 
   @media (max-width: $desktop-width-max) {
     padding: 26px 19px 0;
@@ -106,10 +113,6 @@
   left: 0;
 }
 
-.package__check-img-path {
-  fill: var(--color-accent);
-}
-
 .package__button {
   margin-top: auto;
 
@@ -119,24 +122,17 @@
   }
 }
 
-.package--top {
-  border: 3px solid var(--color-accent);
-  padding: 35px 27px 27px;
-
-  @media (max-width: $desktop-width-max) {
-    padding: 24px 17px 0;
-    border-bottom: none;
-  }
-}
-
-.package--top .package__title {
+.package:hover .package__title {
+  transition: color 0.2s ease-out;
   color: var(--color-accent);
 }
 
-.package--top .package__header {
+.package:hover .package__header {
+  transition: border-color 0.2s ease-out;
   border-color: var(--color-accent);
 }
 
-.package--top .package__check-img-path {
-  fill: var(--color-black);
+.package:hover .package__check-img {
+  transition: color 0.2s ease-out;
+  color: var(--color-accent);
 }

@@ -15,19 +15,11 @@
   border: none;
   text-decoration: none;
   cursor: pointer;
-  outline: transparent solid 2px;
-  outline-offset: 3px;
 
+  &:focus,
   &:hover,
   &:active {
     transition: background-color 0.2s ease-out;
-    background-color: var(--color-accent-hover);
-  }
-
-  &:focus {
-    transition: all 0.2s ease-out;
-    outline: var(--color-accent) solid 2px;
-    outline-offset: 3px;
     background-color: var(--color-accent-hover);
   }
 

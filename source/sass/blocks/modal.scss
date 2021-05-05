@@ -1,0 +1,241 @@
+.modal {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+  left: 0;
+  top: 0;
+  z-index: 30;
+  background-color: var(--color-black-a50);
+
+  @media (max-width: $mobile-width-max) {
+    background-color: var(--color-white);
+  }
+}
+
+.modal.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.modal__container {
+  display: flex;
+  position: relative;
+  width: 728px;
+  min-height: 444px;
+  margin: auto;
+  background-color: var(--color-grey-lighten);
+
+  @media (max-width: $mobile-width-max) {
+    width: 100%;
+    height: 100vh;
+    padding: 0 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+  }
+}
+
+.modal__background::before {
+  content: "";
+  display: block;
+  width: 338px;
+  background-color: var(--color-blue-light);
+  background-image: url("../img/modal-background@1x.jpg");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+
+  @supports (background: url("../img/modal-background@1x.webp")) {
+    background-image: url("../img/modal-background@1x.webp");
+  }
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/modal-background@2x.jpg");
+
+    @supports (background: url("../img/modal-background@2x.webp")) {
+      background-image: url("../img/modal-background@2x.webp");
+    }
+  }
+
+  @media (max-width: $mobile-width-max) {
+    display: none;
+    background: none;
+  }
+}
+
+.modal__form {
+  display: flex;
+  width: 390px;
+  padding: 71px 40px 50px;
+  flex-direction: column;
+  letter-spacing: normal;
+
+  @media (max-width: $mobile-width-max) {
+    width: 100%;
+    padding: 0;
+    box-shadow: none;
+  }
+}
+
+.modal__fields {
+  display: flex;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+
+  @media (max-width: $tablet-width-max) {
+    margin-bottom: 10px;
+  }
+}
+
+.modal__title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 43px;
+  text-align: center;
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 20px;
+  }
+}
+
+.modal__text-success {
+  width: 399px;
+  margin: auto;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 43px;
+  text-align: center;
+  color: var(--color-grey-dark);
+
+  @media (max-width: $mobile-width-max) {
+    width: 100%;
+  }
+}
+
+.modal__label {
+  position: relative;
+  width: 100%;
+  max-width: 270px;
+  margin: 10px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+
+  @media (max-width: $mobile-width-max) {
+    width: 100%;
+    max-width: 288px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.modal__label--required::before {
+  content: "*";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 14px;
+  font-size: 17px;
+  line-height: 21px;
+  color: var(--color-accent);
+}
+
+.modal__country-code {
+  position: absolute;
+  top: 17px;
+  left: 26px;
+}
+
+.modal__input {
+  width: 100%;
+  height: 50px;
+  padding: 16px;
+  font-family: $main-font;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid var(--color-tabs);
+  background-color: var(--color-white);
+
+  &:hover {
+    transition: border-color 0.2s ease-out;
+    border-color: var(--color-accent-hover);
+  }
+}
+
+.modal__input-error {
+  display: none;
+  position: absolute;
+  top: -20px;
+  left: 2px;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--color-accent);
+}
+
+.modal__input--tel {
+  padding-left: 50px;
+}
+
+.modal__button {
+  min-width: 176px;
+  min-height: 50px;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-width-max) {
+    min-width: 250px;
+  }
+}
+
+.modal__close {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+}
+
+.modal__close-button {
+  width: 30px;
+  height: 30px;
+  margin: 16px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.modal__close-button::before,
+.modal__close-button::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-grey-light);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.modal__close-button::before {
+  transform: rotate(-45deg);
+}
+
+.modal__close-button::after {
+  transform: rotate(45deg);
+}
+
+.modal__input:invalid:not(:placeholder-shown) + .modal__input-error {
+  display: block;
+}
+
+.modal__input:valid:not(:placeholder-shown) {
+  border-color: rgb(23, 160, 23);
+}

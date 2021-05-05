@@ -23,12 +23,12 @@
   max-width: 358px;
   margin-bottom: 32px;
 
-  &::after {
-    width: 228px;
-  }
-
   @media (max-width: $tablet-width-max) {
     margin-bottom: 20px;
+  }
+
+  &::after {
+    width: 228px;
   }
 }
 

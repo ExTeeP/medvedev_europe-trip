@@ -21,8 +21,8 @@
   list-style: none;
 
   @media (max-width: $tablet-width-max) {
-    margin-top: 83px;
     flex-direction: column;
+    margin-top: 130px;
     justify-content: flex-start;
     align-items: flex-start;
   }
@@ -48,9 +48,8 @@
 
   &:hover,
   &:active {
-    transition: color 0.3s ease-out, background-color 0.3s ease-out;
+    transition: color 0.2s ease-out;
     color: var(--color-accent);
-    background-color: var(--color-blue-light);
   }
 
   @media (max-width: $tablet-width-max) {
@@ -59,7 +58,18 @@
     padding-left: 16px;
     align-items: center;
     text-align: left;
-    background-color: var(--color-grey-light);
+    background-color: var(--color-grey-lighten);
+  }
+}
+
+.menu__link svg {
+  display: none;
+
+  @media (max-width: $tablet-width-max) {
+    display: block;
+    margin-right: 16px;
+    margin-left: auto;
+    opacity: 0.5;
   }
 }
 

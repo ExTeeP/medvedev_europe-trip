@@ -76,11 +76,11 @@
 }
 
 .burger__active .burger__line::before {
-  transform: translateY(6px) rotate(-44deg);
+  transform: translateY(6px) rotate(-45deg);
 }
 
 .burger__active .burger__line::after {
-  transform: translateY(-6px) rotate(44deg);
+  transform: translateY(-6px) rotate(45deg);
 }
 
 .burger__active .burger__line::before,

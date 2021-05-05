@@ -1,9 +1,54 @@
 .tour-countries {
   position: relative;
+  padding-top: 50px;
+  padding-bottom: 80px;
+
+  @media (max-width: $tablet-width-max) {
+    padding-top: 17px;
+    padding-bottom: 0;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    padding-top: 8px;
+  }
+}
+
+.tour-countries__container {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1444px;
+    height: 1089px;
+    top: 15px;
+    left: -117px;
+    background-image: url("../img/country-background.svg");
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  @media (max-width: $tablet-width-max) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &::before {
+      content: "";
+      display: none;
+      background: none;
+    }
+  }
 }
 
 .tour-countries__item {
-  display: flex;
+  display: none;
+
+  &--active {
+    display: flex;
+  }
 
   @media (max-width: $tablet-width-max) {
     flex-direction: column;
